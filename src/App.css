@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form{
+  max-width: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 166, 0);
+  padding: 10px;
+  box-shadow: 5px 8px 8px -6px rgba(0,0,0,0.5);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.label{
+  width: 100%;
+  margin: 5px 0;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.label label{
+  font-size: 1.05rem;
+  font-weight: 400;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.label input, textarea,select{
+  width: 100%;
+  border: 2px solid black;
+  outline: none;
+  padding: 10px 5px 10px 30px;
+  resize: none;
+  margin-top: 5px;
+}
+
+.label input:focus, textarea:focus,select:focus{
+  border: 2px solid green;
+}
+
+.label i{
+  position: absolute;
+  top: 37px;
+  left: 5px;
+  font-size: 1.10rem;
+  font-weight: bold;
+}
+
+.label input:focus + i, textarea:focus + i, select:focus + i{
+  color: green;
+}
+
+input[type="submit"]{
+  background-color: #000000;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover{
+  background-color: #ff7700;
+  color: #FFFFFF;
+  border: 2px solid #ff7700;
 }
